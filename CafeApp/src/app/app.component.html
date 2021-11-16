@@ -1,3 +1,22 @@
-<div *ngFor = "let usr of users">
-    <div>{{usr.firstName}}</div>
+<span id = "navbar"><img src= '../assets/home_cafe_icon.svg'> <a>CafeApp</a></span>
+<div id='card_main' >
+    <mat-grid-list cols="5" id='card_grid' gutterSize ="25">
+            <mat-grid-tile *ngFor='let p of products'>
+                <mat-card id='card' >
+                    <span>
+                        <img src = 'https://bit.ly/3qHOwFx'/>
+                        <mat-card-title> {{p.productName}} </mat-card-title>
+                    </span>
+                    
+                    <span><mat-card-subtitle>{{p.productInfo}}</mat-card-subtitle></span>
+                    
+                    <p>{{p.productPrice}}</p>
+                    <p>{{p.productRating}}</p>
+                </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+<div id ='bottom_main'>
+<button class = "mat-raised-button">Add Product</button>
+</div>
 </div>
