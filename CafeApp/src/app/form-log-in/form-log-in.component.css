@@ -1,0 +1,44 @@
+#login_form
+{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    margin: 0px auto;
+    max-height: 300px;
+    max-width: 500px;
+    height: 300px;
+    width: 500px;
+    background-color:#370617;
+    border-radius: 5%;
+    right:0px;
+    left: 0px;
+    top:25%;
+    padding: 5%;
+    box-shadow:
+    inset 2 -3em 3em rgba(0,0,0,0.1),
+          2 0  0 2px rgb(255,255,255),
+          2.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+.product-form
+{
+    position: absolute;
+    background-color: rgb(44, 47, 53);
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    width: 400px;
+    height: 600px;
+    top:25%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+    border-radius: 10px;
+}
+#login_form h1
+{
+    color: grey;
+}

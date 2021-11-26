@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
 
 body { height: 100%; background-color: rgba(0, 1, 22, 0.753);}
 body { margin: 0px; padding: 0px; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -28,55 +29,8 @@ body { margin: 0px; padding: 0px; font-family: Roboto, "Helvetica Neue", sans-se
     
 }
 
-#card_main
-{
-    position: relative;
-    margin: 10% auto;
-    padding: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 85%;
-    width: 80%;
-    display: block;
-    background: rgba(0, 0, 0, 0.733);
-    border-radius: 10px;
-}
-#card
-{
-    position: relative;
-    overflow: hidden;
-    margin: 0px auto;
-    width: 350px;
-    height: 175px;
-    padding: 0px;
-    background-color: rgb(32, 32, 34);
-    color:white;
-    
-}
-#card mat-card-subtitle
-{
-    color: white;
-}
 
 
-#card img
-{
-    top: 0px;
-    left: 0px;
-    margin: 0px;
-    border: 5px inset rgba(166, 224, 32, 0.438);
-    border-radius: 10px;
-
-}
-#card_grid
-{
-    position: relative;
-    margin:0px;
-    height: 50%;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-}
 #button_wrapper
 {
     position: relative;
@@ -114,3 +68,32 @@ body { margin: 0px; padding: 0px; font-family: Roboto, "Helvetica Neue", sans-se
     border-radius: 15px ;
 
 }
+
+#profile_icons
+{
+    display: none;
+}
+#profile_buttons
+{
+    position: relative;
+    height: 100%;
+    padding-top: 5px;
+    margin: 0px;
+    display: flex;
+    flex: row;
+    justify-items: space-around;
+    column-gap: 5px;
+}
+
+
+#login_btn_wrapper
+{
+    min-width: 90%;
+    bottom:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10%;
+
+}
+

@@ -3,56 +3,30 @@
         <mat-icon >free_breakfast</mat-icon> 
         <a>CafeApp</a>
     </span>
+    <span>
+        <div id = "profile_buttons">
+            <button mat-raised-button color = "accent" (click) = "displayLogInForm()">Log in</button>
+            <button mat-raised-button color = "accent">Register</button> 
+        </div>
+        <div id = "profile_icons">
+            <mat-icon>account_circle</mat-icon>
+        </div>
+    </span>
 </span>
-<div id='card_main' >
-    <mat-grid-list cols="5" id='card_grid' gutterSize ="25">
-            <mat-grid-tile *ngFor='let p of products'>
-                <mat-card id='card' >
-                    
-                    <mat-card-title-group>
-                        <mat-card-title>{{p.productName}}</mat-card-title>
-                        <mat-card-subtitle>${{p.productPrice}}</mat-card-subtitle>
-                        <img mat-card-sm-image src='https://bit.ly/3qHOwFx'>
-                    </mat-card-title-group>
 
-                    <mat-card-content>{{p.productInfo}}</mat-card-content>
 
-                </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
-</div>
+    <app-product-grid></app-product-grid>
+
+
+
 <div id="button_wrapper">
-   
     <button mat-raised-button color = 'primary'>Add Product</button>
-    <button mat-raised-button color = 'primary'>Delete Product</button>
-    <button mat-raised-button color = 'primary'>Edit Product</button>
-</div>
-<!--
-<div id="form_main" >
-    <div>
-        <h1> <mat-icon>build</mat-icon> Add new Coffe :D </h1>
-    </div>
-    <mat-form-field class = 'form_field' appearance="fill" color = 'accent'>
-        <mat-label> Product name</mat-label>
-        <input matInput placeholder="Product name...">
-    </mat-form-field>
-
-    <mat-form-field class = 'form_field' appearance="fill" color = 'accent'>
-        <mat-label> Product price</mat-label>
-        <input matInput placeholder="Product price...">
-    </mat-form-field>
-
-    <mat-form-field class = 'form_field' appearance="fill" color = 'accent'>
-        <mat-label > Product info</mat-label>
-        <input matInput placeholder="Product info...">
-    </mat-form-field>
-
-    <div>
-        <button mat-fab color="accent">
-            <mat-icon>add</mat-icon>
-          </button>
-
-    </div>
 </div>
 
--->
+
+<form-log-in> </form-log-in>
+
+<!-- <app-add-product-form class="product-form"> </app-add-product-form> -->
+
+
+

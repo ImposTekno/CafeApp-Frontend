@@ -13,10 +13,21 @@ import { AppComponent } from './app.component';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatInputModule} from '@angular/material/input'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatBadgeModule} from '@angular/material/badge';
+import { ProductGridComponent } from './product-grid/product-grid.component';
+import { AddProductFormComponent } from './add-product-form/add-product-form.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { FormLogInComponent } from './form-log-in/form-log-in.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductGridComponent,
+    AddProductFormComponent,
+    FormLogInComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +39,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatBadgeModule,
+    MatTabsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

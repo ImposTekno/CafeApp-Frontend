@@ -1,0 +1,30 @@
+<h2 id ="add-text"> Add new product </h2>
+<mat-form-field class="field" appearance="fill">
+    <mat-label >Product name</mat-label>
+    <input  matInput type="text" id="iName">
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Product price</mat-label>
+    <input  matInput type="number" placeholder="price"id="iPrice">
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Product image</mat-label>
+    <input  matInput type="text" placeholder="Image url here ..." id="iUrl">
+  </mat-form-field>
+
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Select</mat-label>
+    <mat-select>
+      <mat-option value="one">First option</mat-option>
+      <mat-option value="two">Second option</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Product Info</mat-label>
+    <textarea matInput id="iInfo"></textarea>
+  </mat-form-field>
+
+<button mat-fab variant="contained" id ="add-btn" (click) = "addProduct()"><mat-icon>add</mat-icon></button>
