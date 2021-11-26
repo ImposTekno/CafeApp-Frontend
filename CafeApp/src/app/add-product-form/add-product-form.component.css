@@ -1,0 +1,31 @@
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: rgb(121, 185, 37) !important;
+    
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: rgb(121, 185, 37) !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: rgb(121, 185, 37) !important;;
+  }
+
+.field
+{
+    width: 70%;
+    margin: 0px auto;
+}
+
+#add-text
+{
+    margin: 0px auto;
+    color: goldenrod;
+}
+#add-btn
+{
+    margin: 0px auto;
+}

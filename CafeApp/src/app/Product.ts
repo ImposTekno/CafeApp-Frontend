@@ -1,7 +1,5 @@
-export interface Product{
-    productId: number;
-    productName: string;
-    productInfo: string;
-    productPrice: number;
-    productRating: number;
+export class Product{
+    constructor(public productId?: number, public productName?: string,public productInfo?: string,public productPrice?: number,public productRating?: number, public imgUrl?: string){
+
+    }
 }

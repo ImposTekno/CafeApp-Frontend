@@ -6,6 +6,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ProductService } from './product.service';
 import { Product } from './Product';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ import { Product } from './Product';
 export class AppComponent implements OnInit{
   title = 'CafeApp';
   users: User[] = [];
-  products: Product[] = [];
+  
 
   constructor(private userService: UserService, private productService: ProductService ,private mtIconReg: MatIconRegistry,private domSanit: DomSanitizer){
     this.mtIconReg.addSvgIcon('HomeIcon', this.domSanit.bypassSecurityTrustResourceUrl("../assets/home_cafe_icon.svg"));
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.getProducts();
+    //this.getProducts();
   }
 
   public getUsers(): void
@@ -39,18 +40,14 @@ export class AppComponent implements OnInit{
     
   }
 
-  public getProducts(): void 
+  public displayLogInForm(): void
   {
-    this.productService.getProducts().subscribe(
-      (response: Product[]) => {
-        this.products = response;
-      },
-      (error: HttpErrorResponse) =>
-      {
-        console.log(error.message);
-      }
-    )
+    (<HTMLDivElement>document.getElementById('login_form')).style.display= 'flex';
+    (<HTMLDivElement>document.getElementById('card_main')).style.filter = 'blur(5px)';
   }
+
+
+  ///
 }
 
 
