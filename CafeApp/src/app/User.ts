@@ -1,32 +1,36 @@
 export class User
 {
     id: number = 0;
-    firstName: string = "";
-    lastName: string = "";
-    password: string = "";
+    private _firstName: String = "";
+    private _lastName: String = "";
+    private password: String = "";
 
-    public User(_id: number, _firstName: string, _lastName: string, _password: string) : void{
-        this.id = _id;
-        this.firstName = _firstName;
-        this.lastName = _lastName;
-        this.password = _password;
+    constructor()
+    {
+
+    }    
+
+    public get firstName() : String {
+        return this._firstName;
+    }
+    
+    public set firstName(v : String) {
+        this._firstName = v;
+    }
+    
+    
+    public get lastName(): String
+    {
+        return this._lastName;
     }
 
-    public getUserId(): number
+    public set lastName(inStr: String)
     {
-        return this.id;
+        this._lastName = inStr;
     }
-    public getUserName(): string
+    public checkPassword(pass: String): boolean
     {
-        return this.firstName;
-    }
-    public getUserLastName(): string
-    {
-        return this.lastName;
-    }
-    public checkPassword(pass: string): boolean
-    {
-        if(this.password === pass)
+        if(this.password === "TeknoPass")
         {
             return true
         }

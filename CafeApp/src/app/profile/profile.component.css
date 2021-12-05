@@ -1,0 +1,43 @@
+.profile-card
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 5px;
+    margin: 3% auto;
+    left: 0px;
+    right: 0px;
+    width: 80%;
+    height: 90%;
+    background-color: rgba(37, 28, 18, 0.753);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+}
+
+#profileImg
+{
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    margin: 0px auto;
+    opacity: 0.8;
+}
+#cardActions
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.notLoggedIn
+{
+    position: absolute;
+    margin: 0px auto;
+    top:20%;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    color : red;
+}

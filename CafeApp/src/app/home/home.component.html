@@ -1,0 +1,49 @@
+<mat-drawer-container id="drawerContainer" hasBackdrop ="false">
+    <button mat-button color="accent" (click) = "toggleContent()"> 
+
+        <mat-icon *ngIf="isOpen == true">keyboard_arrow_left</mat-icon>
+        <mat-icon>menu</mat-icon>
+        <mat-icon *ngIf ="isOpen == false">keyboard_arrow_right</mat-icon>
+    
+    </button>
+    <mat-drawer mode="side" [opened] = "isOpen" id = "drawerMain"><b style="text-align: center;">Cafe Menu</b>
+        <div id="topButtons">
+            <button mat-stroked-button color="accent" routerLink="/staff"><mat-icon>people</mat-icon> Staff </button>
+            <button mat-stroked-button color="accent" routerLink="/locals"><mat-icon>people</mat-icon> Locals </button>
+            <button mat-stroked-button color="accent" routerLink="/cafes"><mat-icon>people</mat-icon> Cafés</button>
+        </div>
+
+        <div id ="profileButtons" *ngIf = "enableProfile == true" >
+          <button mat-stroked-button color="warn" [routerLink]="['/profile',accountName]"><mat-icon>account_circle</mat-icon> {{accountName}} <mat-icon>more_vert</mat-icon></button>
+        </div>
+        
+    </mat-drawer>
+</mat-drawer-container>
+
+<div id = "homeGridContainer"> 
+ <mat-grid-list cols="2" rowHeight="500">
+    <mat-grid-tile> <img src="https://images.hdqwalls.com/download/need-more-coffee-programmer-story-1920x1200.jpg" /> </mat-grid-tile>
+    <mat-grid-tile>
+         <div> <h1 class="homeTextHeader">Need a place for some Coffee </h1>
+        <p class="homeText">
+            Checkout all the places near you or globally<br />
+            where you can enjoy your favourite beverage,
+            <br />
+            or enrol to get notified when a new place near you opens.
+        </p>   
+       <div class="homePromptBtns">
+
+        <button mat-raised-button color="warn">Featured</button>
+        <button mat-raised-button color="warn">Enrol</button>
+
+       </div>
+    </div> </mat-grid-tile>
+  </mat-grid-list> 
+    
+</div>
+<form-login id ="logForm" *ngIf = "checkForLogin() == true"></form-login>
+
+<div class="dailyFactMain">
+    <h1 id="factHeader"> <strong> <mat-icon>fact_check</mat-icon> Fun Fact :) </strong> </h1>
+    <i>{{factText}}</i>
+</div>

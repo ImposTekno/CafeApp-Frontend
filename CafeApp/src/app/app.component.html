@@ -1,30 +1,33 @@
 <span id = "navbar">
     <span id = "nav_1">
-        <mat-icon >free_breakfast</mat-icon> 
-        <a>CafeApp</a>
+        <mat-icon class="homeLink" >free_breakfast</mat-icon> 
+        <a class ="homeLink" routerLink ="/">CafeApp</a>
     </span>
     <span>
-        <div id = "profile_buttons">
-            <button mat-raised-button color = "accent" (click) = "displayLogInForm()">Log in</button>
+        <div id = "profile_buttons" *ngIf="loggedIn == false">
+            <button mat-raised-button color = "accent" (click) = "logIn()" >Log in</button>
             <button mat-raised-button color = "accent">Register</button> 
         </div>
-        <div id = "profile_icons">
-            <mat-icon>account_circle</mat-icon>
+        <div id = "profile_icons" *ngIf ="loggedIn == true">
+            <a routerLink="/profile">
+                <mat-icon>account_circle</mat-icon>
+                {{userName}}
+            </a>
         </div>
     </span>
 </span>
 
 
-    <app-product-grid></app-product-grid>
+<router-outlet></router-outlet>
 
 
 
-<div id="button_wrapper">
-    <button mat-raised-button color = 'primary'>Add Product</button>
-</div>
 
 
-<form-log-in> </form-log-in>
+
+
+
+
 
 <!-- <app-add-product-form class="product-form"> </app-add-product-form> -->
 

@@ -1,25 +1,27 @@
-<div id ="login_form">
+<div id ="login_form" >
     <h1>Log into your account: </h1>
-
-    <mat-form-field appearance="outline">
-        <mat-label for="username">e-mail / username</mat-label>
-            <input matInput ngModel name="username" placeholder="username" id ="usrN">
-            <mat-icon matSuffix>thumb_up_alt</mat-icon>
-        <mat-hint>Tip</mat-hint>
-      </mat-form-field>
-      
-      <mat-form-field  appearance="outline">
-        <mat-label for='password'>password</mat-label>
-        <input matInput ngModel name="password" type ="password" placeholder="password..." id ="usrP">
-        <mat-icon matSuffix>visibility</mat-icon>
-        <mat-hint>Tip</mat-hint>
-      </mat-form-field>
+  <div id ="formFields">
+      <mat-form-field appearance="outline">
+          <mat-label for="username">e-mail / username</mat-label>
+              <input matInput [(ngModel)] = "uName" name="username" placeholder="username" id ="usrN" color="accent">
+              <mat-icon matSuffix>thumb_up_alt</mat-icon>
+              <mat-icon matSuffix>thumb_down_alt</mat-icon>
+          <mat-hint>Tip</mat-hint>
+        </mat-form-field>
+        
+        <mat-form-field  appearance="outline">
+          <mat-label for='password'>password</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type ="password" placeholder="password..." id ="usrP">
+          <mat-icon matSuffix>visibility</mat-icon>
+          <mat-hint>Tip</mat-hint>
+        </mat-form-field>
+  </div>
 
       <span id ="login_btn_wrapper">
-        <button mat-fab color="accent">
+        <button mat-fab color="accent" (click) = "closeForm()">
             <mat-icon>close</mat-icon>
         </button>
-        <button (click) = "onLogIn()" mat-fab color="accent">
+        <button  mat-fab color="accent" (click) = "onLogIn()">
             <mat-icon>navigate_next</mat-icon>
         </button>
       </span>

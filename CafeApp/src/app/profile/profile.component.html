@@ -1,0 +1,24 @@
+
+<mat-card class="profile-card" *ngIf ="hasLoggedIn == true">
+    <img mat-card-image [src]="profileImage" alt="Profile Photo" id ="profileImg">
+    <mat-card-header>
+        <div mat-card-avatar class="profile-header-image"></div>
+        <mat-card-title>{{profileUserName}} <mat-icon>edit</mat-icon></mat-card-title>
+        <mat-card-subtitle> {{profileLastName}} </mat-card-subtitle>
+    </mat-card-header>
+     
+    <mat-card-content>
+        <p>
+            This is a dynamic profile page
+        </p>
+    </mat-card-content>
+    <mat-card-actions id ="cardActions">
+        <button mat-stroked-button color="warn">Edit</button>
+        <button mat-stroked-button color="warn">Share Profile</button>
+    </mat-card-actions>
+</mat-card>
+
+<div class="notLoggedIn">
+    <h1>This profile is either logged out or doesn't exist!!<br /> Please provide valid name or (log in link)</h1>
+    <img src ="https://www.callcentrehelper.com/images/stories/2020/06/despair-at-failure-cartoon-760.png">
+</div>
