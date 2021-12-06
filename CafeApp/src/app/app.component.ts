@@ -7,6 +7,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ProductService } from './product.service';
 import { Product } from './Product';
 import { Observable } from 'rxjs';
+import { HomeComponent } from './home/home.component';
+import { LoginService } from './login.service';
+
 
 @Component({
   selector: 'app-root',
@@ -16,15 +19,24 @@ import { Observable } from 'rxjs';
 export class AppComponent implements OnInit{
   title = 'CafeApp';
   users: User[] = [];
+  public userName: String = "";
+  public loggedIn: boolean = false;
   
 
-  constructor(private userService: UserService, private productService: ProductService ,private mtIconReg: MatIconRegistry,private domSanit: DomSanitizer){
-    this.mtIconReg.addSvgIcon('HomeIcon', this.domSanit.bypassSecurityTrustResourceUrl("../assets/home_cafe_icon.svg"));
+  constructor(
+    private userService: UserService,
+     private productService: ProductService, 
+     private logInService: LoginService, 
+     private mtIconReg: MatIconRegistry,
+     private domSanit: DomSanitizer
+     )
+     {
+        this.mtIconReg.addSvgIcon('HomeIcon', this.domSanit.bypassSecurityTrustResourceUrl("../assets/home_cafe_icon.svg"));
 
-  }
+      }
 
   ngOnInit(){
-    //this.getProducts();
+    this.getUsers();
   }
 
   public getUsers(): void
@@ -39,13 +51,11 @@ export class AppComponent implements OnInit{
       );
     
   }
-
-  public displayLogInForm(): void
+  //Login Button Method
+  public logIn()
   {
-    (<HTMLDivElement>document.getElementById('login_form')).style.display= 'flex';
-    (<HTMLDivElement>document.getElementById('card_main')).style.filter = 'blur(5px)';
+    this.logInService.setDisplayLogInForm(true);
   }
-
 
   ///
 }

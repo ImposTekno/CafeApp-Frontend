@@ -19,6 +19,13 @@ import { AddProductFormComponent } from './add-product-form/add-product-form.com
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormLogInComponent } from './form-log-in/form-log-in.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import {RouterModule} from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { CafeGridComponent } from './cafe-grid/cafe-grid.component';
+import { ProfileComponent } from './profile/profile.component';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './login.service';
 
 
 @NgModule({
@@ -27,7 +34,11 @@ import { ProductCardComponent } from './product-card/product-card.component';
     ProductGridComponent,
     AddProductFormComponent,
     FormLogInComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CafeGridComponent,
+    HomeComponent,
+    ProfileComponent
+
   ],
   imports: [
     BrowserModule,
@@ -41,10 +52,20 @@ import { ProductCardComponent } from './product-card/product-card.component';
     MatInputModule,
     MatButtonModule,
     MatBadgeModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent},
+      { path: 'locals', component: CafeGridComponent},
+      { path: 'profile/:username', component: ProfileComponent}
+      //{ path: '**', component: PageNotFoundComponent},
+
+  ])
     
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
