@@ -1,5 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Cafe } from '../Cafe';
+import { CafeService } from '../cafe.service';
 import { Product } from '../Product';
 import { ProductService } from '../product.service';
 
@@ -11,10 +13,12 @@ import { ProductService } from '../product.service';
 export class ProductGridComponent implements OnInit {
 
   products: Product[] = [];
-  constructor(private productService: ProductService) { }
+  cafes: Cafe[];
+  constructor(private productService: ProductService, private cafeService: CafeService) { }
 
   ngOnInit(): void {
     this.getProducts();
+    this.getCafes();
   }
 
 
@@ -29,5 +33,13 @@ export class ProductGridComponent implements OnInit {
         console.log(error.message);
       }
     )
+  }
+
+  public getCafes():void
+  {
+    this.cafeService.getCafe().subscribe((response: Cafe[]) =>{
+      this.cafes = response;
+
+    });
   }
 }

@@ -1,0 +1,60 @@
+<div class="formWrapper">
+    <div class="regImage"> 
+        <img src="https://i.pinimg.com/736x/58/f0/25/58f02582df075bf2642fab7b4442ce44.jpg" alt="NotLoading!!" class="regImage">
+    </div>
+    <div class ="regForm" >
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Name </mat-label>
+            <input matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Surname </mat-label>
+            <input matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Password </mat-label>
+            <input matInput type="password" required> 
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Confirm password </mat-label>
+            <input matInput type="password" required>
+        </mat-form-field>
+
+    
+    
+    </div>
+
+    <div class="regForm">
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput type ="date" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Gender</mat-label>
+                <mat-select>
+                    <mat-option value="male">Male</mat-option>
+                    <mat-option value="female">Female</mat-option>
+                </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class ="formFields">
+            <mat-label>Profile type</mat-label>
+                <mat-select>
+                    <mat-option value="owner">Owner</mat-option>
+                    <mat-option value="worker">Worker</mat-option>
+                    <mat-option value ="manager">Manager</mat-option>  
+                    <mat-option value="client">Client</mat-option>
+                </mat-select>
+        </mat-form-field>
+
+        <div id ="confirmFormButton">
+            <button mat-raised-button color="accent">Confirm</button>
+            <i *ngIf ="registrationFailed == true">Please fill all the requierd fields! </i>
+        </div>
+    </div>
+</div>

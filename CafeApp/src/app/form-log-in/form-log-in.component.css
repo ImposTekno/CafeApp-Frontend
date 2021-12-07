@@ -6,13 +6,15 @@
     max-height: 400px;
     max-width: 500px;
     width: 500px;
-    background-color: rgba(37, 28, 18, 0.753);
+    background-color: rgba(37, 28, 18, 0.932);
     margin: 0px;
     border-radius: 5%;
     right:0px;
     left: 0px;
     top:25%;
     padding: 5%;
+    color: aliceblue;
+    text-align: center;
     box-shadow:
     inset 2 -3em 3em rgba(0,0,0,0.1),
           2 0  0 2px rgb(2, 253, 107),

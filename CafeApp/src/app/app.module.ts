@@ -26,6 +26,11 @@ import { ProfileComponent } from './profile/profile.component';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './login.service';
+import { StaffDisplayComponent } from './staff-display/staff-display.component';
+import { RegisterComponent } from './register/register.component';
+import {MatSelectModule} from '@angular/material/select'; 
+import { MatOptionModule } from '@angular/material/core';
+import { CafeCardComponent } from './cafe-card/cafe-card.component';
 
 
 @NgModule({
@@ -37,7 +42,10 @@ import { LoginService } from './login.service';
     ProductCardComponent,
     CafeGridComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    StaffDisplayComponent,
+    RegisterComponent,
+    CafeCardComponent
 
   ],
   imports: [
@@ -56,10 +64,14 @@ import { LoginService } from './login.service';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSelectModule,
+    MatOptionModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent},
       { path: 'locals', component: CafeGridComponent},
-      { path: 'profile/:username', component: ProfileComponent}
+      { path: 'profile/:username', component: ProfileComponent},
+      { path: 'staff', component: StaffDisplayComponent },
+      { path: 'register', component: RegisterComponent}
       //{ path: '**', component: PageNotFoundComponent},
 
   ])

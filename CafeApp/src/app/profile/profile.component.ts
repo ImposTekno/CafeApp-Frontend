@@ -16,14 +16,11 @@ export class ProfileComponent implements OnInit {
   private myProfile: User; 
   public profileImage: String = "https://images.hdqwalls.com/wallpapers/dak-red-anon-guy-4k-0r.jpg";
   public profileUserName: String;
-  public profileLastName: String = ""; 
+  public profileLastName: String; 
   public hasLoggedIn: boolean = false;
   
-  constructor(private routeParam: ActivatedRoute, private userService: UserService) {
+  constructor(private routeParam: ActivatedRoute, private userService: UserService) {}
 
-   }
-
-   // on init method obviously 
     ngOnInit(): void {         
         this.routeParam.paramMap.subscribe((params) =>{
           if(params.get('username'))
@@ -45,8 +42,7 @@ export class ProfileComponent implements OnInit {
           }
         });
       
-       
-        
+
 
     } 
 

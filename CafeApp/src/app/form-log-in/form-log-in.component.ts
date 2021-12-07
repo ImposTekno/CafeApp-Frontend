@@ -12,6 +12,8 @@ export class FormLogInComponent implements OnInit {
 
   public uName: string;
   public password: String;
+  public valid:boolean = true;
+  public visible:boolean = true;
 
   constructor(private userService: UserService,private logInService: LoginService) { }
   ngOnInit(): void {
