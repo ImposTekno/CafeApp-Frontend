@@ -1,18 +1,20 @@
 <div id ="login_form" >
-    <h1>Log into your account: </h1>
+    <h1>Log into your account</h1>
   <div id ="formFields">
       <mat-form-field appearance="outline">
           <mat-label for="username">e-mail / username</mat-label>
               <input matInput [(ngModel)] = "uName" name="username" placeholder="username" id ="usrN" color="accent">
-              <mat-icon matSuffix>thumb_up_alt</mat-icon>
-              <mat-icon matSuffix>thumb_down_alt</mat-icon>
+              <mat-icon matSuffix *ngIf= "valid == true">thumb_up_alt</mat-icon>
+              <mat-icon matSuffix *ngIf="valid == false">thumb_down_alt</mat-icon>
           <mat-hint>Tip</mat-hint>
         </mat-form-field>
         
         <mat-form-field  appearance="outline">
           <mat-label for='password'>password</mat-label>
           <input matInput [(ngModel)]="password" name="password" type ="password" placeholder="password..." id ="usrP">
-          <mat-icon matSuffix>visibility</mat-icon>
+          <button matSuffix mat-button *ngIf="visible == true" color ="accentw"><mat-icon  >visibility</mat-icon></button>
+          <button matSuffix mat-button *ngIf="visible == false" color ="accentw"><mat-icon  >visibility_off</mat-icon></button>
+          
           <mat-hint>Tip</mat-hint>
         </mat-form-field>
   </div>

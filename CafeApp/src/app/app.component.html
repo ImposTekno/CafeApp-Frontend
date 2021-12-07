@@ -1,15 +1,16 @@
 <span id = "navbar">
     <span id = "nav_1">
-        <mat-icon class="homeLink" >free_breakfast</mat-icon> 
-        <a class ="homeLink" routerLink ="/">CafeApp</a>
+         
+        <a class ="homeLink" routerLink ="/"><mat-icon class="homeLink" >free_breakfast</mat-icon>CafeApp</a>
     </span>
     <span>
-        <div id = "profile_buttons" *ngIf="loggedIn == false">
+        <div id = "profile_buttons" *ngIf="checkIfLoggedIn() == false">
             <button mat-raised-button color = "accent" (click) = "logIn()" >Log in</button>
-            <button mat-raised-button color = "accent">Register</button> 
+            <button mat-raised-button color = "accent" routerLink ="/register">Register</button> 
         </div>
-        <div id = "profile_icons" *ngIf ="loggedIn == true">
-            <a routerLink="/profile">
+
+        <div id = "profile_icons" *ngIf ="checkIfLoggedIn() == true">
+            <a routerLink="/profile/userName">
                 <mat-icon>account_circle</mat-icon>
                 {{userName}}
             </a>

@@ -56,7 +56,14 @@ export class AppComponent implements OnInit{
   {
     this.logInService.setDisplayLogInForm(true);
   }
+  checkIfLoggedIn():boolean
+  {
+    this.logInService.getProfileEnabled().subscribe((response: boolean) => {
+      this.loggedIn = response;
 
+    });
+    return this.loggedIn;
+  }
   ///
 }
 

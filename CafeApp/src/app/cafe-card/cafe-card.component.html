@@ -1,0 +1,23 @@
+
+<mat-card id='card'>
+    
+    <span class="card-header">
+        <mat-card-actions align = "end">
+            <button mat-icon-button color="warn" (click) = "deleteCafe()"><mat-icon>delete</mat-icon></button>
+        </mat-card-actions> 
+        <mat-card-title-group>
+            <mat-card-title>{{c.cafeName}}</mat-card-title>
+            <mat-card-subtitle>{{c.cafeAddress}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <img mat-card-sm-image src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.H6daG0GpNfU9AB-C9hXbPwHaEu%26pid%3DApi&f=1" />
+    </span>
+    
+    
+
+    <mat-card-content>
+        Number of tables: {{c.maxTables}} <br />
+        Cuisine type:     {{c.cuisineType}}
+    </mat-card-content>
+
+
+</mat-card>

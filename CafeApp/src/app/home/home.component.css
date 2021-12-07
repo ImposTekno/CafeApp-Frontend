@@ -34,7 +34,7 @@
 #homeGridContainer
 {
     position: absolute;
-    margin: 0px auto;
+    margin: 10px auto;
     top:49px;
     left:0px;
     right:0px;
@@ -80,11 +80,12 @@
 }
 .dailyFactMain
 {
-    position: relative;
+    position: absolute;
     margin: 0px auto;
-    top: 90%;
+    bottom:20%;
+    top: 80%;
+    left:0px;
     right: 0px;
-    left: 0px;
     text-align: center;
     color:rgb(252, 153, 6);
 

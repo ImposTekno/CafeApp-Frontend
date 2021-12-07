@@ -18,7 +18,7 @@
     </mat-card-actions>
 </mat-card>
 
-<div class="notLoggedIn">
+<div class="notLoggedIn" *ngIf ="hasLoggedIn == false">
     <h1>This profile is either logged out or doesn't exist!!<br /> Please provide valid name or (log in link)</h1>
     <img src ="https://www.callcentrehelper.com/images/stories/2020/06/despair-at-failure-cartoon-760.png">
 </div>
